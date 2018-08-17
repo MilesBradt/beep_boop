@@ -27,12 +27,14 @@ $(document).ready(function() {
       // Spec attempt (doesn't work)
       results = increments.toString().split("");
       for (var i = 0; i < results.length; i ++) {
-        results = results[i].replace(/0/g, 'beep')
+        results[i] = results[i].replace(/0/g, 'beep')
       };
 
-      $("#output").text(increments);
+      $("#output").text(results);
 
-
+      console.log(results);
+      console.log(ranges);
+      console.log(increments);
 
       // Doesn't work at all
       // ranges.forEach(function(range){
@@ -67,8 +69,7 @@ $(document).ready(function() {
       // }
       // console.log(increments);
       // });
-      console.log(ranges);
-      console.log(increments);
+
 
 
 
