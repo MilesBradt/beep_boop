@@ -9,7 +9,6 @@
 // Pop all spec increments
 // Clone array then ??????
 
-
 var ranges = [0];
 var increments = [];
 
@@ -24,9 +23,6 @@ $(document).ready(function() {
         increments.push(ranges ++);
       };
 
-
-
-
       // Spec attempts (doesn't work will full digits)
       results = increments.toString().split("");
 
@@ -36,7 +32,7 @@ $(document).ready(function() {
       //   return alert("I can't do that");
       //   };
       // }));
-      
+
       for (var i = 0; i < results.length; i ++) {
         results[i] = results[i].replace(/1/g, 'boop')
       };
@@ -44,7 +40,7 @@ $(document).ready(function() {
         results[i] = results[i].replace(/0/g, 'beep')
       };
 
-
+      $('.panel').show();
       $("#output").text(results);
 
       console.log(results);
@@ -64,8 +60,7 @@ $(document).ready(function() {
 
       // Only increments once then breaks and only during each click
       // ranges.forEach(function(range) {
-
-
+      
       //Spec attempts (none work)
       // for (var i = 0; i < increments.length; i ++) {
       // Only does bottom one
@@ -84,10 +79,6 @@ $(document).ready(function() {
       // }
       // console.log(increments);
       // });
-
-
-
-
 
     }));
   });

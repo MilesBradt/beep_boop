@@ -1,3 +1,23 @@
+#output {
+  font-size: 24px;
+}
+
+.panel {
+  display: none;
+  background-color: #434345;
+}
+
+.jumbotron {
+color: #2A2A2B;
+background-color: #B0C2BC;
+}
+
+button {
+  color: #2A2A2B;
+}
+
 body {
   text-align: center;
+  color: #B0C2BC;
+  background-color: #2A2A2B;
 }
