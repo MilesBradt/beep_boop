@@ -7,14 +7,13 @@
 // Convert array into to string
 // Pop all spec numbers
 // Clone array then ??????
-
-
+// Set range to display and stop a user user's input
+//
+var numbers = [];
 
 $(document).ready(function() {
   $("form#userNumbers").submit(function(event){
     event.preventDefault();
-
-    var numbers = [];
 
 
     $("input#userInput").each(function(){
@@ -22,22 +21,22 @@ $(document).ready(function() {
       numbers.push(userInput);
     });
 
-    for (var i = 0; i < numbers.length; i ++) {
-      // Only does bottom one
-      // number = numbers[i].replace(/1/g, 'boop');
-      // number = numbers[i].replace(/0/g, 'beep');
-
-      // Only outputs 0 for some reason
-      // if (numbers[i] = 0){
-      //   numbers[i] = "beep";
-      // }
-
-      // Will display "I can't do that" but only if one number is in the input
-      if (numbers % 3 === 0){
-      alert("I can't do that");
-    }
-}
-    console.log(numbers);
+    // for (var i = 0; i < numbers.length; i ++) {
+    //   // Only does bottom one
+    //   // number = numbers[i].replace(/1/g, 'boop');
+    //   // number = numbers[i].replace(/0/g, 'beep');
+    //
+    //   // Only outputs 0 for some reason
+    //   // if (numbers[i] = 0){
+    //   //   numbers[i] = "beep";
+    //   // }
+    //
+    //   // Will display "I can't do that" but only if one number is in the input
+    //   if (numbers % 3 === 0){
+    //     alert("I can't do that");
+    //   }
+    // }
+    // console.log(numbers);
 
     $("#output").text(numbers);
   });
