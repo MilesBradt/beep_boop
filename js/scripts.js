@@ -19,15 +19,17 @@ $(document).ready(function() {
       boops.push(userInput);
     });
 
-    beepBoops = boops.toString().split("");
-    for (var i = 0; i < beepBoops.length; i ++) {
-      var output = beepBoops[i];
-      if (output === "0") {
-        beepBoops[i] = "beep";
-      }
-      console.log(boops);
-      console.log(beepBoops);
-    }
+    beepBoops = boops.toString();
+    $("#output").text(beepBoops);
+    console.log(boops);
+    console.log(beepBoops);
+    //  for (var i = 0; i < beepBoops.length; i ++) {
+    //    var output = beepBoops[i];
+    //   if (output = 0) {
+    //     beepBoops[i] = "beep";
+    //   }
+    //
+    // }
 
   });
 });
