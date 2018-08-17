@@ -9,27 +9,31 @@
 // Pop all spec numbers
 // Clone array then ??????
 
+
+
 $(document).ready(function() {
   $("form#userNumbers").submit(function(event){
     event.preventDefault();
+
     var boops = [];
 
-    $("input#userInput").each(function(){
+    parseInt($("input#userInput").each(function(){
       var userInput = $(this).val();
       boops.push(userInput);
-    });
+    }));
 
-    beepBoops = boops.toString();
-    $("#output").text(beepBoops);
+    for (var i = 0; i < boops.length; i ++) {
+       // boops[i] = boops[i].replace(/0/g, 'beep'); from: https://stackoverflow.com/questions/953311/replace-string-in-javascript-array#
+
+     if (boops[i] === 0) {
+       boops[i] = "beep";
+     }
+    }
+
+
     console.log(boops);
-    console.log(beepBoops);
-    //  for (var i = 0; i < beepBoops.length; i ++) {
-    //    var output = beepBoops[i];
-    //   if (output = 0) {
-    //     beepBoops[i] = "beep";
-    //   }
-    //
-    // }
 
+
+    $("#output").text(boops);
   });
 });
