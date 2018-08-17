@@ -9,17 +9,23 @@
 // Clone array then ??????
 // Set range to display and stop a user user's input
 //
-var numbers = [];
+
+var ranges = [];
+
 
 $(document).ready(function() {
   $("form#userNumbers").submit(function(event){
     event.preventDefault();
+    var input = parseInt($("#userInput").val());
+    ranges.push(input);
 
-
-    $("input#userInput").each(function(){
-      var userInput = $(this).val();
-      numbers.push(userInput);
+    ranges.forEach(function(range){
+      if (range < input) {
+        ranges ++;
+      }
     });
+
+    console.log(ranges);
 
     // for (var i = 0; i < numbers.length; i ++) {
     //   // Only does bottom one
@@ -38,6 +44,7 @@ $(document).ready(function() {
     // }
     // console.log(numbers);
 
-    $("#output").text(numbers);
+    $("#output").text(ranges);
   });
+
 });
