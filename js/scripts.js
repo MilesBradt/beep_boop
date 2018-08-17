@@ -24,11 +24,15 @@ $(document).ready(function() {
         increments.push(ranges ++);
       };
 
-      // Spec attempt (doesn't work)
+      // Spec attempts (doesn't work will full digits)
       results = increments.toString().split("");
+      for (var i = 0; i < results.length; i ++) {
+        results[i] = results[i].replace(/1/g, 'boop')
+      };
       for (var i = 0; i < results.length; i ++) {
         results[i] = results[i].replace(/0/g, 'beep')
       };
+
 
       $("#output").text(results);
 
