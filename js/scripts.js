@@ -15,25 +15,20 @@ $(document).ready(function() {
   $("form#userNumbers").submit(function(event){
     event.preventDefault();
 
-    var boops = [];
+    var numbers = [];
+    var beeps = [];
 
-    parseInt($("input#userInput").each(function(){
+    $("input#userInput").each(function(){
       var userInput = $(this).val();
-      boops.push(userInput);
-    }));
+      numbers.push(userInput);
+    });
 
-    for (var i = 0; i < boops.length; i ++) {
-       // boops[i] = boops[i].replace(/0/g, 'beep'); from: https://stackoverflow.com/questions/953311/replace-string-in-javascript-array#
-
-     if (boops[i] === 0) {
-       boops[i] = "beep";
-     }
+    for (var i = 0; i < numbers.length; i ++) {
+      beeps = numbers[i].replace(/0/g, 'beep');
     }
 
+    console.log(numbers);
 
-    console.log(boops);
-
-
-    $("#output").text(boops);
+    $("#output").text(beeps);
   });
 });
