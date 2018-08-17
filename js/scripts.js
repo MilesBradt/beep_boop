@@ -5,7 +5,6 @@
 
 // Ideas
 // Convert array into to string
-// Run for loop
 // Pop all spec numbers
 // Clone array then ??????
 
@@ -24,18 +23,20 @@ $(document).ready(function() {
     });
 
     for (var i = 0; i < numbers.length; i ++) {
-      //only does bottom one
+      // Only does bottom one
       // number = numbers[i].replace(/1/g, 'boop');
       // number = numbers[i].replace(/0/g, 'beep');
 
-      //only outputs 0 for some reason
+      // Only outputs 0 for some reason
       // if (numbers[i] = 0){
       //   numbers[i] = "beep";
       // }
 
+      // Will display "I can't do that" but only if one number is in the input
+      if (numbers % 3 === 0){
+      alert("I can't do that");
     }
-
-
+}
     console.log(numbers);
 
     $("#output").text(numbers);
