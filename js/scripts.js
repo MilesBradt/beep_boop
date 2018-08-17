@@ -24,8 +24,19 @@ $(document).ready(function() {
         increments.push(ranges ++);
       };
 
+
+
+
       // Spec attempts (doesn't work will full digits)
       results = increments.toString().split("");
+
+      // Final spec attempt (doesn't work and not sure why)
+      // parseInt(increments.forEach(function(cantDo){
+      // if (cantDo % 3 === 0){
+      //   return alert("I can't do that");
+      //   };
+      // }));
+      
       for (var i = 0; i < results.length; i ++) {
         results[i] = results[i].replace(/1/g, 'boop')
       };
