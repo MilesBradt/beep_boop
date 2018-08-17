@@ -16,7 +16,7 @@ $(document).ready(function() {
     event.preventDefault();
 
     var numbers = [];
-    var beeps = [];
+
 
     $("input#userInput").each(function(){
       var userInput = $(this).val();
@@ -24,11 +24,20 @@ $(document).ready(function() {
     });
 
     for (var i = 0; i < numbers.length; i ++) {
-      beeps = numbers[i].replace(/0/g, 'beep');
+      //only does bottom one
+      // number = numbers[i].replace(/1/g, 'boop');
+      // number = numbers[i].replace(/0/g, 'beep');
+
+      //only outputs 0 for some reason
+      // if (numbers[i] = 0){
+      //   numbers[i] = "beep";
+      // }
+
     }
+
 
     console.log(numbers);
 
-    $("#output").text(beeps);
+    $("#output").text(numbers);
   });
 });
