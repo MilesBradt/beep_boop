@@ -17,15 +17,17 @@ $(document).ready(function() {
     $("input#userInput").each(function(){
       var userInput = $(this).val();
       boops.push(userInput);
-
     });
 
-    // for (i = 0; i < boops.length; i ++) {
-    //   var beepBoop = boops[i];
-    //   if (boops === "0") {
-    //     alert("boop");
-    //   }
-    // }
-    console.log(boops);
+    beepBoops = boops.toString().split("");
+    for (var i = 0; i < beepBoops.length; i ++) {
+      var output = beepBoops[i];
+      if (output === "0") {
+        beepBoops[i] = "beep";
+      }
+      console.log(boops);
+      console.log(beepBoops);
+    }
+
   });
 });
