@@ -11,7 +11,7 @@ _Place a number and keep clicking to generate an array to increment by one until
 ## Setup/Installation Requirements
 
 * _Open index.html_
-* _Open through gh-pages link: _
+* _Open through gh-pages link: https://milesbradt.github.io/beep_boop/_
 
 ## Spec objectives (least important to most important)
 
