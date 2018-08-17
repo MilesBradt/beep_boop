@@ -10,20 +10,37 @@
 // Set range to display and stop a user user's input
 //
 
-var ranges = [];
+var ranges = [0];
+var increments = [];
 
 
 $(document).ready(function() {
   $("form#userNumbers").submit(function(event){
     event.preventDefault();
     var input = parseInt($("#userInput").val());
-    ranges.push(input);
 
-    ranges.forEach(function(range){
-      if (range < input) {
-        ranges ++;
-      }
+    // ranges.forEach(function(range){
+    //   if (range < input) {
+    //     ranges ++;
+    //   }
+    // });
+
+    // ranges = ranges.map(function(val){
+    //   return ++ val;
+
+    ranges.forEach(function(range) {
+      if (ranges < input) {
+        increments.push(ranges ++);
+      } 
+
+
     });
+
+    $("#output").text(increments);
+    // ranges.forEach(function(range){
+    //   increments.push(range += 1);
+    //   $("#output").text(increments);
+    // });
 
     console.log(ranges);
 
@@ -44,7 +61,7 @@ $(document).ready(function() {
     // }
     // console.log(numbers);
 
-    $("#output").text(ranges);
+
   });
 
 });
